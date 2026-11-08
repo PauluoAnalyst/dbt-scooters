@@ -1,6 +1,6 @@
 {{ config(
     materialized='table',
-    alias='scooters_raw.trips_stat',
+    alias='trips_stat',
 ) }}
 with t as (
 		select
