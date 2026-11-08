@@ -1,3 +1,7 @@
+{{ config(
+    materialized='table',
+    alias='scooters_raw.trips_stat',
+) }}
 with t as (
 		select
 			count(*) as trips,

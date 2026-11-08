@@ -1,6 +1,6 @@
 {{ config(
     materialized='table',
-    alias='scooters_raw.trips_stat_daily'  -- Здесь укажите желаемое имя таблицы в БД
+    alias='scooters_raw.trips_stat_daily',
 ) }}
 select
 	date(started_at) as date, --дата начала поездки (день).
