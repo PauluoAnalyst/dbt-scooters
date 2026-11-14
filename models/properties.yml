@@ -24,6 +24,10 @@ models:
   
   - name: "trips_age_daily"
     description: "Daily trips statistics by user age"
+    config:
+      materialized: table
 
   - name: "trips_age_daily_stat"
     description: "Aggregation of daily trips statistics by user age"
+    config:
+      materialized: table
