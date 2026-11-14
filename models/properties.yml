@@ -10,3 +10,13 @@ sources:
 
       - name: "users"
         description: "Users of scooter service"
+
+    models:
+      - name: "trips_prep"
+      description: "prepared view for analysis"
+        +materialized:view
+      - name: "trips_stat_daily"
+      description: "Overall trips statistics per day"
+      config:
+        indexes:
+          - columns: ["date"]
