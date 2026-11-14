@@ -1,6 +1,6 @@
 {{ config(
     materialized='table',
-    alias='trips_age_daily',
+    alias='trips_age_daily_stat',
 ) }}
 select
     age,
