@@ -11,6 +11,9 @@ sources:
       - name: "users"
         description: "Users of scooter service"
 
+      - name: "events"
+        description: "Raw user events with duplicates"
+
 models:
   - name: trips_prep
     description: "prepared view for analysis"
@@ -48,6 +51,11 @@ models:
       materialized: table
 
   - name: "trips_users"
-    description: "denormolized table for product analytics - trips + sex + age"
+    description: "Prepared trips enriched with users data"
     config:
-      materialized: table
+      materialized: "incremental"
+
+  - name: "events_clean"
+    description: "User events without duplicates"
+    config:
+      materialized: "incremental"
