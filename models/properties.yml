@@ -31,3 +31,8 @@ models:
     description: "Aggregation of daily trips statistics by user age"
     config:
       materialized: table
+  
+  - name: "trips_geom"
+    description: "Trips prepared for geometry analysis"
+    config:
+      materialized: "view"
