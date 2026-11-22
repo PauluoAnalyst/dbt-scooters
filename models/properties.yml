@@ -6,6 +6,12 @@ seeds:
     config:
       delimiter: ","
 
+  - name: "event_types"
+    description: "Meaningful types of mobile app events"
+
+  - name: "age_groups"
+    description: "Age groups to split users for analysis"
+
 sources:
   - name: "scooters_raw"
     description: "Raw data provided by scooters service"
@@ -85,3 +91,16 @@ models:
 
   - name: "companies_trips"
     description: "Trip satistics by company"
+
+  - name: "events_full"
+    description: "full_events with name of event prepared for final analysis"
+    config:
+      materialized: "view"
+  
+  - name: "enents_stat"
+    description: "stat by pct of cancellation"
+
+  - name: "trips_age_group"
+    description: "stat by age groups trips"
+    config:
+      materialized: "table"
