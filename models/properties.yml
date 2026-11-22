@@ -1,5 +1,11 @@
 version: 2
 
+seeds:
+  - name: "scooters"
+    description: "Scooter models info and statistics"
+    config:
+      delimiter: ","
+
 sources:
   - name: "scooters_raw"
     description: "Raw data provided by scooters service"
@@ -73,3 +79,9 @@ models:
     description: "Number of simultaneous rides in time"
     config:
       materialized: "incremental"
+
+  - name: "companies"
+    description: "Scooter satistics by company"
+
+  - name: "companies_trips"
+    description: "Trip satistics by company"
